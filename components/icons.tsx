@@ -1,13 +1,14 @@
 import {
+  Anchor,
+  Aperture,
   Copy,
   Database,
   LucideProps,
   Moon,
+  Plane,
   SunMedium,
   Twitter,
   type Icon as LucideIcon,
-  Anchor,
-  Aperture,
 } from "lucide-react"
 
 export type Icon = LucideIcon
@@ -20,6 +21,7 @@ export const Icons = {
   copy: Copy,
   anchor: Anchor,
   aperture: Aperture,
+  plane: Plane,
   logo: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <path

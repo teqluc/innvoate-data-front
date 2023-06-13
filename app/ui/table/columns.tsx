@@ -3,6 +3,7 @@ import { ColumnDef } from "@tanstack/react-table"
 import { siteConfig } from "@/config/site"
 
 import SurveyDialogDetails from "../dialog/survey-detail"
+import SurveyDialogTargetDetails from "../dialog/survey-target-details"
 
 export const columns: ColumnDef<any>[] = [
   {
@@ -53,13 +54,18 @@ export const columns: ColumnDef<any>[] = [
             console.error("Survey Detail Error: ", err)
           })
       }
-      return isCopy ? (
+      return (
         <div className="flex gap-2">
+          {isCopy ? (
+            <div className="cursor-pointer">
+              <SurveyDialogTargetDetails details={details} />
+            </div>
+          ) : null}
           <div className="cursor-pointer">
             <SurveyDialogDetails details={details} />
           </div>
         </div>
-      ) : null
+      )
     },
   },
   {
