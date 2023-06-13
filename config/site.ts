@@ -15,5 +15,5 @@ export const siteConfig = {
     github: "https://github.com/shadcn/ui",
     docs: "https://ui.shadcn.com",
   },
-  baseUrl: "http://innovate-stage-209385288.us-east-1.elb.amazonaws.com/api/v2/supply/"
+  baseUrl: process.env.NEXT_PUBLIC_BASE_URL + "supply/",
 }
